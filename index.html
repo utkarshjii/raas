@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raaspriya Travels | Bus, Tempo Traveller, Car Booking — All India</title>
+<meta name="description" content="Raaspriya Travels — Bus, Tempo Traveller, Car, SUV और Innova-type vehicle booking. शादी, तीर्थ यात्रा, family trip और All India travel के लिए trusted partner network से vehicle arrangement। अभी WhatsApp पर बुकिंग करें।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ============================================================
+   EDITABLE BUSINESS SETTINGS — colors are CSS variables below.
+   Search this file for "EDIT HERE" to find every place you
+   should personalize with real business details.
+   ============================================================ */
+:root{
+  --navy: #0B1F3A;
+  --navy-deep: #071527;
+  --saffron: #8E1528;
+  --saffron-light: #AE3B4E;
+  --gold: #C6922E;
+  --cream: #FAF8F3;
+  --beige: #F3EDE2;
+  --white: #FFFFFF;
+  --ink: #14213A;
+  --ink-soft: #4A5568;
+  --line: #ECE1CB;
+  --success: #1e8a5f;
+  --radius-lg: 22px;
+  --radius-md: 14px;
+  --radius-sm: 9px;
+  --shadow-soft: 0 10px 30px rgba(11,31,58,0.10);
+  --shadow-strong: 0 22px 55px rgba(11,31,58,0.22);
+  --font-display: 'Baloo 2', 'Hind', sans-serif;
+  --font-body: 'Hind', sans-serif;
+}
+
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--cream);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+img,svg{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+ul{list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;}
+h1,h2,h3,h4{font-family:var(--font-display);color:var(--navy);line-height:1.25;}
+.container{max-width:1180px;margin:0 auto;padding:0 24px;}
+section{position:relative;}
+.section-pad{padding:88px 0;}
+@media(max-width:768px){.section-pad{padding:60px 0;}}
+
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-family:var(--font-display);font-weight:600;font-size:0.82rem;
+  letter-spacing:0.06em;color:var(--saffron);
+  background:rgba(142,21,40,0.10);
+  padding:6px 16px;border-radius:999px;
+  margin-bottom:14px;
+}
+.eyebrow::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--saffron);}
+
+.section-head{max-width:680px;margin:0 auto 48px;text-align:center;}
+.section-head h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin-bottom:12px;}
+.section-head p{color:var(--ink-soft);font-size:1.05rem;}
+
+/* Road-dash divider used as the site's signature motif */
+.road-divider{
+  height:34px;position:relative;overflow:hidden;
+}
+.road-divider svg{width:100%;height:100%;}
+
+/* ===================== TRUST BAR ===================== */
+.trust-strip{
+  background:var(--white);border-bottom:1px solid var(--line);
+  padding:26px 0;
+}
+.trust-strip-inner{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+}
+@media(max-width:800px){.trust-strip-inner{grid-template-columns:repeat(2,1fr);}}
+.trust-item{display:flex;align-items:center;gap:12px;}
+.trust-item .ticon{
+  width:42px;height:42px;flex-shrink:0;border-radius:12px;
+  background:linear-gradient(145deg,rgba(142,21,40,0.12),rgba(201,147,46,0.12));
+  display:flex;align-items:center;justify-content:center;color:var(--saffron);
+}
+.trust-item .ticon svg{width:22px;height:22px;stroke:currentColor;fill:none;stroke-width:2;}
+.trust-item strong{display:block;font-family:var(--font-display);font-size:1rem;color:var(--navy);}
+.trust-item span{font-size:0.82rem;color:var(--ink-soft);}
+
+/* ===================== TESTIMONIALS ===================== */
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+@media(max-width:900px){.testi-grid{grid-template-columns:1fr;}}
+.testi-card{
+  background:var(--white);border-radius:var(--radius-lg);
+  padding:28px 26px;box-shadow:var(--shadow-soft);border:1px solid var(--line);
+  display:flex;flex-direction:column;gap:14px;
+}
+.testi-stars{color:var(--gold);letter-spacing:2px;font-size:0.95rem;}
+.testi-card p.quote{color:var(--ink-soft);font-size:0.98rem;font-style:italic;flex-grow:1;}
+.testi-person{display:flex;align-items:center;gap:12px;}
+.testi-avatar{
+  width:44px;height:44px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(145deg,var(--navy),var(--navy-deep));
+  color:var(--white);display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:700;font-size:1rem;
+}
+.testi-person strong{display:block;font-size:0.92rem;color:var(--navy);}
+.testi-person span{font-size:0.78rem;color:var(--ink-soft);}
+
+.verified-strip{
+  display:flex;flex-wrap:wrap;gap:12px;margin-top:22px;
+}
+.verified-chip{
+  display:inline-flex;align-items:center;gap:7px;
+  background:rgba(30,138,95,0.08);color:var(--success);
+  border:1px solid rgba(30,138,95,0.25);
+  padding:8px 14px;border-radius:999px;font-size:0.82rem;font-weight:600;
+}
+.verified-chip svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:2.5;}
+
+/* ===================== DESTINATIONS ===================== */
+.dest-stack{display:flex;flex-direction:column;gap:16px;}
+.dest-card{
+  position:relative;border-radius:var(--radius-md);overflow:hidden;
+  min-height:170px;display:flex;align-items:flex-end;
+  box-shadow:var(--shadow-soft);
+  background-size:cover;background-position:center;
+  transition:transform .3s ease;
+}
+.dest-card:hover{transform:translateY(-3px);}
+.dest-card::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(100deg,var(--tint-a,#0b2547) 0%, transparent 70%);
+  opacity:var(--tint-opacity,0.92);
+}
+.dest-card::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(0deg,rgba(0,0,0,0.6) 0%, transparent 60%);
+}
+.dest-card .dest-label{
+  position:relative;z-index:2;padding:18px 20px;color:var(--white);width:100%;
+}
+.dest-card .dest-label strong{display:block;font-family:var(--font-display);font-size:1.2rem;}
+.dest-card .dest-label span{font-size:0.82rem;color:rgba(255,255,255,0.9);}
+.dest-card .dest-tag{
+  position:absolute;top:14px;left:14px;z-index:2;
+  background:rgba(255,255,255,0.18);backdrop-filter:blur(4px);
+  color:var(--white);font-size:0.72rem;font-weight:700;letter-spacing:0.04em;
+  padding:5px 12px;border-radius:999px;
+}
+@media(min-width:700px){
+  .dest-card{min-height:220px;}
+  .dest-card .dest-label{padding:24px 28px;}
+  .dest-card .dest-label strong{font-size:1.4rem;}
+}
+
+/* ===================== STATS ===================== */
+.stats-band{background:var(--navy-deep);color:var(--white);}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;text-align:center;}
+@media(max-width:900px){.stats-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:560px){.stats-grid{grid-template-columns:repeat(2,1fr);}}
+.stat-item strong{
+  display:block;font-family:var(--font-display);font-weight:800;
+  font-size:clamp(1.6rem,3vw,2.2rem);
+  background:linear-gradient(135deg,var(--saffron-light),var(--gold));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.stat-item span{font-size:0.82rem;color:rgba(255,255,255,0.75);}
+
+/* ===================== GALLERY ===================== */
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:110px;gap:10px;
+}
+@media(max-width:900px){.gallery-grid{grid-template-columns:repeat(3,1fr);}}
+.gallery-item{
+  position:relative;border-radius:var(--radius-sm);overflow:hidden;
+  background:linear-gradient(155deg,var(--tint-a,#0b2547),var(--tint-b,#c9932e));
+}
+.gallery-item.tall{grid-row:span 2;}
+.gallery-item span{
+  position:absolute;bottom:8px;left:10px;color:rgba(255,255,255,0.9);
+  font-size:0.72rem;font-weight:600;
+}
+
+/* ===================== NAVBAR ===================== */
+header.navbar{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(11,31,58,0.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(142,21,40,0.25);
+}
+.nav-inner{
+  max-width:1180px;margin:0 auto;padding:0 24px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:74px;
+}
+.brand{display:flex;align-items:center;gap:10px;}
+.brand-mark{
+  width:44px;height:44px;border-radius:12px;
+  background:linear-gradient(145deg,var(--saffron),var(--gold));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--font-display);font-weight:800;color:var(--navy-deep);font-size:1.15rem;
+  flex-shrink:0;
+}
+.brand-logo-img{
+  background:var(--white);
+  object-fit:cover;
+  padding:2px;
+}
+.brand-text{display:flex;flex-direction:column;line-height:1.1;}
+.brand-text strong{font-family:var(--font-display);color:var(--white);font-size:1.18rem;letter-spacing:0.01em;}
+.brand-text span{font-size:0.72rem;color:var(--saffron-light);font-weight:500;}
+
+.nav-links{display:flex;align-items:center;gap:30px;}
+.nav-links a{
+  color:rgba(255,255,255,0.85);font-weight:500;font-size:0.98rem;
+  position:relative;padding:6px 2px;transition:color .2s ease;
+}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-2px;width:0;height:2px;
+  background:var(--saffron);transition:width .25s ease;
+}
+.nav-links a:hover{color:var(--white);}
+.nav-links a:hover::after{width:100%;}
+
+.nav-cta{
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:var(--white);font-weight:600;padding:11px 24px;border-radius:999px;
+  font-size:0.95rem;box-shadow:0 8px 20px rgba(142,21,40,0.35);
+  transition:transform .2s ease, box-shadow .2s ease;
+  white-space:nowrap;
+}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 12px 26px rgba(142,21,40,0.45);}
+
+.lang-toggle{
+  display:flex;align-items:center;background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.2);border-radius:999px;padding:3px;
+  gap:2px;margin-right:6px;flex-shrink:0;
+}
+.lang-toggle button{
+  background:transparent;color:rgba(255,255,255,0.7);
+  font-size:0.78rem;font-weight:700;padding:6px 12px;border-radius:999px;
+  transition:.2s ease;letter-spacing:0.02em;
+}
+.lang-toggle button.active{background:linear-gradient(135deg,var(--saffron),var(--gold));color:var(--white);}
+
+.hamburger{
+  display:none;flex-direction:column;gap:5px;background:none;padding:8px;
+}
+.hamburger span{width:24px;height:2.5px;background:var(--white);border-radius:2px;transition:.25s;}
+
+.mobile-menu{
+  display:none;flex-direction:column;
+  background:var(--navy-deep);
+  border-top:1px solid rgba(142,21,40,0.25);
+  padding:10px 24px 22px;
+}
+.mobile-menu a{
+  color:rgba(255,255,255,0.88);padding:13px 0;font-weight:500;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.mobile-menu .nav-cta{margin-top:14px;text-align:center;}
+
+@media(max-width:900px){
+  .nav-links{display:none;}
+  .hamburger{display:flex;}
+  header.navbar.open .mobile-menu{display:flex;}
+}
+
+/* ===================== HERO ===================== */
+.hero{
+  position:relative;
+  background:
+    radial-gradient(circle at 15% 20%, rgba(142,21,40,0.25), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(201,147,46,0.20), transparent 50%),
+    linear-gradient(160deg, var(--navy-deep) 0%, var(--navy) 55%, #0d2c56 100%);
+  color:var(--white);
+  padding:70px 0 60px;
+  overflow:hidden;
+}
+.hero-road-bg{
+  position:absolute;inset:0;pointer-events:none;opacity:0.5;
+}
+.hero-inner{
+  position:relative;z-index:2;
+  max-width:1180px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:1.15fr 0.85fr;gap:50px;align-items:center;
+}
+@media(max-width:960px){.hero-inner{grid-template-columns:1fr;}}
+
+.trust-badge{
+  display:inline-flex;align-items:center;gap:10px;flex-wrap:wrap;
+  background:rgba(255,255,255,0.08);
+  border:1px solid rgba(255,255,255,0.15);
+  padding:8px 18px;border-radius:999px;font-size:0.85rem;
+  color:rgba(255,255,255,0.85);margin-bottom:22px;
+}
+.trust-badge b{color:var(--saffron-light);font-weight:600;}
+.dot-sep{width:4px;height:4px;border-radius:50%;background:rgba(255,255,255,0.4);}
+
+.hero h1{
+  font-size:clamp(2.1rem,4.6vw,3.4rem);
+  color:var(--white);
+  margin-bottom:18px;
+}
+.hero h1 .accent{color:var(--saffron-light);}
+.hero p.sub{
+  font-size:1.15rem;color:rgba(255,255,255,0.82);max-width:560px;margin-bottom:30px;
+}
+.hero-ctas{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:34px;}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:15px 30px;border-radius:12px;font-weight:600;font-size:1rem;
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+.btn-primary{
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:var(--white);box-shadow:0 14px 32px rgba(142,21,40,0.4);
+}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 18px 38px rgba(142,21,40,0.5);}
+.btn-outline{
+  background:rgba(255,255,255,0.06);
+  border:1.5px solid rgba(255,255,255,0.35);
+  color:var(--white);
+}
+.btn-outline:hover{background:rgba(255,255,255,0.14);transform:translateY(-3px);}
+.btn-whatsapp{background:#25D366;color:#06340f;box-shadow:0 14px 30px rgba(37,211,102,0.35);}
+.btn-whatsapp:hover{transform:translateY(-3px);box-shadow:0 18px 36px rgba(37,211,102,0.45);}
+
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;}
+.hero-stats div{border-left:2px solid var(--saffron);padding-left:12px;}
+.hero-stats strong{display:block;font-family:var(--font-display);font-size:1.05rem;color:var(--white);}
+.hero-stats span{font-size:0.82rem;color:rgba(255,255,255,0.65);}
+
+/* Hero visual: layered vehicle silhouettes card */
+.hero-visual{position:relative;}
+.hero-card{
+  background:rgba(255,255,255,0.06);
+  border:1px solid rgba(255,255,255,0.15);
+  border-radius:var(--radius-lg);
+  padding:26px;
+  backdrop-filter:blur(6px);
+  box-shadow:var(--shadow-strong);
+}
+.hero-card svg{width:100%;height:auto;}
+.hero-card-caption{
+  margin-top:14px;text-align:center;color:rgba(255,255,255,0.75);font-size:0.9rem;
+}
+
+/* ===================== BOOKING FORM ===================== */
+.booking-section{
+  background:var(--white);
+  margin-top:-46px;position:relative;z-index:5;
+  border-radius:26px 26px 0 0;
+  box-shadow:0 -14px 40px rgba(11,31,58,0.10);
+}
+.booking-card{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-soft);
+  padding:36px;
+  margin-top:-70px;
+  position:relative;z-index:6;
+}
+@media(max-width:600px){.booking-card{padding:22px;}}
+.booking-card h2{font-size:1.5rem;margin-bottom:6px;}
+.booking-card .sub-note{color:var(--ink-soft);font-size:0.95rem;margin-bottom:26px;}
+
+.form-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:18px;
+}
+@media(max-width:900px){.form-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.form-grid{grid-template-columns:1fr;}}
+
+.field{display:flex;flex-direction:column;gap:6px;}
+.field.full{grid-column:1/-1;}
+.field label{font-size:0.86rem;font-weight:600;color:var(--navy);}
+.field label .req{color:var(--saffron);}
+.field input,.field select,.field textarea{
+  border:1.5px solid var(--line);
+  border-radius:var(--radius-sm);
+  padding:12px 14px;font-size:0.97rem;font-family:inherit;color:var(--ink);
+  background:var(--cream);
+  transition:border-color .2s ease, box-shadow .2s ease;
+}
+.field input:focus,.field select:focus,.field textarea:focus{
+  outline:none;border-color:var(--saffron);
+  box-shadow:0 0 0 4px rgba(142,21,40,0.14);
+  background:var(--white);
+}
+.trip-toggle{display:flex;gap:10px;}
+.trip-toggle label{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  border:1.5px solid var(--line);border-radius:var(--radius-sm);
+  padding:11px;font-weight:600;font-size:0.92rem;color:var(--ink-soft);
+  cursor:pointer;transition:.2s;background:var(--cream);
+}
+.trip-toggle input{accent-color:var(--saffron);width:16px;height:16px;}
+.trip-toggle input:checked + span{color:var(--navy);}
+.trip-toggle label:has(input:checked){border-color:var(--saffron);background:rgba(142,21,40,0.08);}
+
+.form-submit-row{
+  display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;
+  margin-top:26px;
+}
+.submit-btn{
+  background:linear-gradient(135deg,var(--saffron),var(--gold));
+  color:var(--white);padding:15px 34px;border-radius:12px;font-weight:700;font-size:1rem;
+  box-shadow:0 14px 30px rgba(142,21,40,0.35);
+  transition:transform .2s ease;
+}
+.submit-btn:hover{transform:translateY(-2px);}
+.form-hint{font-size:0.85rem;color:var(--ink-soft);}
+
+.form-msg{
+  margin-top:18px;padding:14px 18px;border-radius:var(--radius-sm);
+  font-size:0.94rem;display:none;
+}
+.form-msg.show{display:block;}
+.form-msg.success{background:rgba(30,138,95,0.1);color:var(--success);border:1px solid rgba(30,138,95,0.25);}
+.form-msg.error{background:rgba(198,42,42,0.08);color:#c62a2a;border:1px solid rgba(198,42,42,0.22);}
+
+/* ===================== VEHICLES ===================== */
+.vehicle-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+@media(max-width:900px){.vehicle-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.vehicle-grid{grid-template-columns:1fr;}}
+
+.vcard{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:var(--radius-lg);
+  padding:28px 24px;
+  transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+  position:relative;overflow:hidden;
+}
+.vcard::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--saffron),var(--gold));
+  transform:scaleX(0);transform-origin:left;transition:transform .3s ease;
+}
+.vcard:hover{transform:translateY(-6px);box-shadow:var(--shadow-strong);border-color:transparent;}
+.vcard:hover::before{transform:scaleX(1);}
+.vcard .vicon{
+  width:58px;height:58px;border-radius:16px;
+  background:linear-gradient(145deg,rgba(142,21,40,0.14),rgba(201,147,46,0.14));
+  display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+}
+.vcard .vicon svg{width:30px;height:30px;stroke:var(--saffron);}
+.vcard h3{font-size:1.18rem;margin-bottom:8px;}
+.vcard p{color:var(--ink-soft);font-size:0.94rem;margin-bottom:16px;}
+.vcard .vlink{
+  font-weight:600;font-size:0.9rem;color:var(--navy);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.vcard .vlink svg{width:15px;height:15px;stroke:var(--navy);transition:transform .2s;}
+.vcard:hover .vlink svg{transform:translateX(4px);}
+
+/* ===================== ALL INDIA ===================== */
+.all-india{
+  background:var(--navy);
+  color:var(--white);
+  position:relative;
+  overflow:hidden;
+}
+.all-india::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 80% 20%, rgba(142,21,40,0.18), transparent 45%);
+}
+.all-india .section-head h2{color:var(--white);}
+.all-india .section-head p{color:rgba(255,255,255,0.7);}
+.city-grid{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;max-width:820px;margin:0 auto 26px;
+  position:relative;z-index:2;
+}
+.city-chip{
+  background:rgba(255,255,255,0.07);
+  border:1px solid rgba(255,255,255,0.16);
+  padding:10px 20px;border-radius:999px;font-weight:500;font-size:0.94rem;
+  transition:.2s;
+}
+.city-chip:hover{background:rgba(142,21,40,0.2);border-color:var(--saffron);transform:translateY(-2px);}
+.all-india .note{
+  text-align:center;color:rgba(255,255,255,0.6);font-size:0.9rem;max-width:520px;margin:0 auto;
+  position:relative;z-index:2;
+}
+
+/* ===================== WHY CHOOSE ===================== */
+.why-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+}
+@media(max-width:900px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:560px){.why-grid{grid-template-columns:1fr;}}
+.why-card{
+  background:var(--cream);
+  border-radius:var(--radius-md);
+  padding:26px 22px;
+  border:1px solid var(--line);
+}
+.why-card .wicon{
+  width:44px;height:44px;border-radius:12px;
+  background:var(--navy);display:flex;align-items:center;justify-content:center;margin-bottom:14px;
+}
+.why-card .wicon svg{width:22px;height:22px;stroke:var(--saffron-light);}
+.why-card h3{font-size:1.05rem;margin-bottom:6px;}
+.why-card p{font-size:0.9rem;color:var(--ink-soft);}
+
+/* ===================== HOW IT WORKS ===================== */
+.steps-wrap{position:relative;}
+.steps-line{
+  position:absolute;top:34px;left:0;right:0;height:2px;
+  background-image:repeating-linear-gradient(90deg, var(--gold) 0 14px, transparent 14px 26px);
+  z-index:0;
+}
+@media(max-width:860px){.steps-line{display:none;}}
+.steps-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:26px;position:relative;z-index:1;
+}
+@media(max-width:860px){.steps-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:520px){.steps-grid{grid-template-columns:1fr;}}
+.step{text-align:center;}
+.step-num{
+  width:68px;height:68px;border-radius:50%;margin:0 auto 18px;
+  background:linear-gradient(145deg,var(--saffron),var(--gold));
+  color:var(--white);font-family:var(--font-display);font-weight:700;font-size:1.4rem;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 12px 26px rgba(142,21,40,0.3);
+  border:5px solid var(--cream);
+}
+.step h3{font-size:1.05rem;margin-bottom:8px;}
+.step p{font-size:0.9rem;color:var(--ink-soft);}
+
+/* ===================== SPECIAL BOOKINGS ===================== */
+.special-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:16px;
+}
+@media(max-width:900px){.special-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.special-grid{grid-template-columns:1fr;}}
+.special-item{
+  background:var(--white);border:1px solid var(--line);border-radius:var(--radius-md);
+  padding:20px;display:flex;align-items:center;gap:14px;
+  transition:.2s;
+}
+.special-item:hover{border-color:var(--saffron);box-shadow:var(--shadow-soft);transform:translateY(-3px);}
+.special-item .sicon{
+  width:40px;height:40px;flex-shrink:0;border-radius:10px;
+  background:rgba(142,21,40,0.12);display:flex;align-items:center;justify-content:center;font-size:1.2rem;
+}
+.special-item span{font-weight:600;font-size:0.94rem;color:var(--navy);}
+
+/* ===================== CONTACT ===================== */
+.contact-wrap{
+  display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;
+}
+@media(max-width:860px){.contact-wrap{grid-template-columns:1fr;}}
+.contact-info h2{margin-bottom:14px;}
+.contact-info p{color:var(--ink-soft);margin-bottom:24px;}
+.contact-list{display:flex;flex-direction:column;gap:16px;margin-bottom:26px;}
+.contact-list li{display:flex;align-items:center;gap:14px;}
+.contact-list .cicon{
+  width:46px;height:46px;border-radius:12px;background:var(--navy);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.contact-list .cicon svg{width:22px;height:22px;stroke:var(--saffron-light);}
+.contact-list strong{display:block;color:var(--navy);font-size:0.98rem;}
+.contact-list span{color:var(--ink-soft);font-size:0.9rem;}
+.contact-btns{display:flex;gap:14px;flex-wrap:wrap;}
+
+.contact-card{
+  background:var(--navy);border-radius:var(--radius-lg);padding:34px;color:var(--white);
+  box-shadow:var(--shadow-strong);
+}
+.contact-card h3{color:var(--white);margin-bottom:6px;}
+.contact-card p{color:rgba(255,255,255,0.7);font-size:0.92rem;margin-bottom:20px;}
+
+/* ===================== FOOTER ===================== */
+footer{
+  background:var(--navy-deep);color:rgba(255,255,255,0.75);padding:50px 0 100px;
+}
+.footer-inner{
+  display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:26px;
+  margin-bottom:30px;
+}
+.footer-brand strong{font-family:var(--font-display);color:var(--white);font-size:1.3rem;}
+.footer-brand p{margin-top:8px;color:rgba(255,255,255,0.55);font-size:0.92rem;max-width:320px;}
+.footer-links{display:flex;gap:26px;flex-wrap:wrap;}
+.footer-links a{color:rgba(255,255,255,0.75);font-size:0.92rem;}
+.footer-links a:hover{color:var(--saffron-light);}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;
+  font-size:0.85rem;color:rgba(255,255,255,0.45);text-align:center;
+}
+
+/* ===================== STICKY MOBILE BAR ===================== */
+.sticky-mobile-bar{
+  display:none;
+  position:fixed;bottom:0;left:0;right:0;z-index:999;
+  background:var(--white);border-top:1px solid var(--line);
+  box-shadow:0 -8px 24px rgba(11,31,58,0.14);
+  padding:10px 14px;gap:10px;
+}
+.sticky-mobile-bar a{
+  flex:1;display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:13px;border-radius:12px;font-weight:700;font-size:0.92rem;
+}
+.sticky-mobile-bar .call{background:var(--navy);color:var(--white);}
+.sticky-mobile-bar .wa{background:#25D366;color:#06340f;}
+@media(max-width:768px){
+  .sticky-mobile-bar{display:flex;}
+  body{padding-bottom:66px;}
+}
+
+/* Reveal-on-scroll animation */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease, transform .6s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+
+@media (prefers-reduced-motion: reduce){
+  *{transition:none !important;animation:none !important;}
+  html{scroll-behavior:auto;}
+  .reveal{opacity:1;transform:none;}
+}
+
+:focus-visible{outline:3px solid var(--saffron);outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     EDIT HERE — BUSINESS CONTACT DETAILS
+     Update phone, WhatsApp number and location everywhere below.
+     WhatsApp number format required by JS: country code + number,
+     no +, no spaces. Example: 91XXXXXXXXXX
+     ============================================================ -->
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="brand">
+      <img src="logo.png" alt="Raaspriya Travels Logo" class="brand-mark brand-logo-img">
+      <div class="brand-text">
+        <strong>Raaspriya Travels</strong>
+        <span>आपकी हर यात्रा का साथी</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#destinations">Destinations</a>
+      <a href="#services">Services</a>
+      <a href="#vehicles">Vehicles</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <div class="lang-toggle">
+        <button type="button" data-lang="hi" class="active">हिं</button>
+        <button type="button" data-lang="en">EN</button>
+      </div>
+      <a href="#booking" class="nav-cta" data-en="Book Now">बुकिंग करें</a>
+    </nav>
+    <button class="hamburger" id="hamburgerBtn" aria-label="Menu खोलें" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#services">Services</a>
+    <a href="#vehicles">Vehicles</a>
+    <a href="#how-it-works">How It Works</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <div class="lang-toggle" style="margin:8px 0;">
+      <button type="button" data-lang="hi" class="active">हिं</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+    <a href="#booking" class="nav-cta" data-en="Book Now">बुकिंग करें</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section class="hero" id="home">
+  <svg class="hero-road-bg" viewBox="0 0 1200 500" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M -50 480 C 250 380, 350 480, 600 400 C 850 320, 950 420, 1250 340" stroke="rgba(255,255,255,0.14)" stroke-width="60" fill="none"/>
+    <path d="M -50 480 C 250 380, 350 480, 600 400 C 850 320, 950 420, 1250 340" stroke="rgba(255,255,255,0.35)" stroke-width="2" stroke-dasharray="14 16" fill="none"/>
+  </svg>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="trust-badge">
+        <b data-en="Trusted Service">स्थानीय सेवा</b><span class="dot-sep"></span>
+        <span>All India Travel</span><span class="dot-sep"></span>
+        <span>Trusted Travel Partners</span>
+      </div>
+      <h1 data-en="Every Journey Made <span class='accent'>Simple</span>, Safe &amp; Comfortable">हर सफर होगा <span class="accent">आसान</span>, सुरक्षित और आरामदायक</h1>
+      <p class="sub" data-en="Car, bus, tempo traveller and every vehicle type — booked for travel anywhere in India. Your complete journey, planned in one place, backed by a verified partner network.">कार, बस, टेम्पो ट्रैवलर एवं सभी प्रकार के वाहनों की बुकिंग — भारत में कहीं भी यात्रा के लिए। एक ही जगह पर आपकी पूरी यात्रा योजना।</p>
+      <div class="hero-ctas">
+        <a href="#booking" class="btn btn-primary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M13 6l6 6-6 6"/></svg>
+          <span data-en="Book Now">अभी बुकिंग करें</span>
+        </a>
+        <a href="#" id="heroWhatsapp" class="btn btn-whatsapp">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38a9.9 9.9 0 0 0 4.74 1.21h.01c5.46 0 9.91-4.45 9.91-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.08c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.12.11-1.8-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.36-.14-.2-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.2 0 .39 0 .56.01.18.01.42-.07.66.5.24.6.83 2.06.9 2.21.07.15.12.33.02.53-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.3.76 1.25 1.63 2.03 1.12 1 2.06 1.31 2.36 1.46.3.15.47.13.65-.08.18-.2.75-.87.95-1.17.2-.3.4-.25.66-.15.27.1 1.71.81 2 .96.29.15.48.22.55.34.07.13.07.75-.17 1.43z"/></svg>
+          <span data-en="Ask on WhatsApp">WhatsApp पर पूछें</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>All India</strong><span data-en="Travel Coverage">Travel Coverage</span></div>
+        <div><strong>Bus • Tempo • Car</strong><span data-en="Every Vehicle Type">सभी वाहन प्रकार</span></div>
+        <div><strong>Call / WhatsApp</strong><span data-en="Easy Booking">आसान बुकिंग</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-card">
+        <svg viewBox="0 0 420 260" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="190" width="420" height="70" fill="rgba(255,255,255,0.05)"/>
+          <rect x="0" y="205" width="420" height="6" fill="rgba(255,255,255,0.15)"/>
+          <!-- Bus -->
+          <g transform="translate(30,80)">
+            <rect x="0" y="30" width="180" height="80" rx="14" fill="#8E1528"/>
+            <rect x="0" y="30" width="180" height="80" rx="14" fill="url(#g1)"/>
+            <rect x="14" y="44" width="34" height="28" rx="4" fill="#dff3ff"/>
+            <rect x="56" y="44" width="34" height="28" rx="4" fill="#dff3ff"/>
+            <rect x="98" y="44" width="34" height="28" rx="4" fill="#dff3ff"/>
+            <rect x="140" y="44" width="28" height="28" rx="4" fill="#dff3ff"/>
+            <circle cx="34" cy="112" r="14" fill="#0b2547"/>
+            <circle cx="34" cy="112" r="6" fill="#c9c9c9"/>
+            <circle cx="146" cy="112" r="14" fill="#0b2547"/>
+            <circle cx="146" cy="112" r="6" fill="#c9c9c9"/>
+            <rect x="0" y="86" width="180" height="10" fill="#c9932e"/>
+          </g>
+          <!-- Car -->
+          <g transform="translate(250,120)">
+            <path d="M0 40 Q4 16 30 14 L86 14 Q104 16 110 40 L110 52 Q110 58 104 58 L6 58 Q0 58 0 52 Z" fill="#0b2547"/>
+            <path d="M22 14 Q30 -2 55 -2 Q80 -2 86 14 Z" fill="#0b2547"/>
+            <rect x="28" y="0" width="52" height="14" rx="3" fill="#9fd7ff" opacity="0.85"/>
+            <circle cx="24" cy="58" r="13" fill="#071a34"/>
+            <circle cx="24" cy="58" r="5" fill="#c9c9c9"/>
+            <circle cx="86" cy="58" r="13" fill="#071a34"/>
+            <circle cx="86" cy="58" r="5" fill="#c9c9c9"/>
+          </g>
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#8E1528"/>
+              <stop offset="1" stop-color="#c9932e"/>
+            </linearGradient>
+          </defs>
+        </svg>
+        <p class="hero-card-caption">Bus • Tempo Traveller • Car • SUV — आपकी ज़रूरत के अनुसार</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TRUST STRIP ===================== -->
+<section class="trust-strip">
+  <div class="container">
+    <div class="trust-strip-inner">
+      <div class="trust-item reveal">
+        <div class="ticon"><svg viewBox="0 0 24 24"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div>
+          <strong data-en="Verified Partner Network">वेरिफाइड पार्टनर नेटवर्क</strong>
+          <span data-en="Checked vehicles &amp; drivers">जांचे हुए वाहन और ड्राइवर</span>
+        </div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="ticon"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.5 8.5 0 0 1-3.8-.9L3 20l1.1-5.1a8.4 8.4 0 0 1-1-4A8.4 8.4 0 0 1 11.6 3a8.5 8.5 0 0 1 9.4 8.5z" stroke-linejoin="round"/></svg></div>
+        <div>
+          <strong data-en="Secure WhatsApp Booking">सुरक्षित WhatsApp बुकिंग</strong>
+          <span data-en="No hidden calls, no spam">कोई छुपे हुए charge नहीं</span>
+        </div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="ticon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2" stroke-linecap="round"/></svg></div>
+        <div>
+          <strong data-en="Quick Response">तुरंत जवाब</strong>
+          <span data-en="Fast confirmation on your request">तेज़ी से booking confirmation</span>
+        </div>
+      </div>
+      <div class="trust-item reveal">
+        <div class="ticon"><svg viewBox="0 0 24 24"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8L21 13M3 13h18v4H3z" stroke-linejoin="round"/></svg></div>
+        <div>
+          <strong data-en="Transparent Pricing">पारदर्शी मूल्य</strong>
+          <span data-en="Clear cost before you travel">यात्रा से पहले साफ जानकारी</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== POPULAR DESTINATIONS ===================== -->
+<section class="section-pad" id="destinations">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="Explore India">एक्सप्लोर इंडिया</div>
+      <h2 data-en="Popular Destinations">लोकप्रिय गंतव्य</h2>
+      <p data-en="Sacred and scenic places across India, covered by our travel network.">भारत के पवित्र और खूबसूरत स्थल — हमारे travel network के साथ।</p>
+    </div>
+    <!-- EDIT HERE: swap image src or add more <img> once you have photos for Prayagraj, Rajasthan(extra), Goa -->
+    <div class="dest-stack">
+      <div class="dest-card reveal" style="background-image:url('images/varanasi-1.jpg');--tint-opacity:0.45;"><span class="dest-tag">🛕 Spiritual</span><div class="dest-label"><strong>Varanasi</strong><span>City of Ghats</span></div></div>
+      <div class="dest-card reveal" style="background-image:url('images/ayodhya.webp');--tint-opacity:0.4;"><span class="dest-tag">🛕 Spiritual</span><div class="dest-label"><strong>Ayodhya</strong><span>Birthplace of Lord Ram</span></div></div>
+      <div class="dest-card reveal" style="background-image:url('images/mathura-vrindavan.webp');--tint-opacity:0.35;"><span class="dest-tag">🛕 Spiritual</span><div class="dest-label"><strong>Mathura-Vrindavan</strong><span>Land of Krishna</span></div></div>
+      <div class="dest-card reveal" style="background-image:url('images/agra-taj.webp');--tint-opacity:0.3;"><span class="dest-tag">🕌 Heritage</span><div class="dest-label"><strong>Agra</strong><span>Home of the Taj Mahal</span></div></div>
+      <div class="dest-card reveal" style="--tint-a:#3a2400;--tint-opacity:0.9;background:linear-gradient(100deg,#3a2400,#7a5a1a);"><span class="dest-tag">🛕 Spiritual</span><div class="dest-label"><strong>Prayagraj</strong><span>Sangam of Three Rivers</span></div></div>
+      <div class="dest-card reveal" style="background-image:url('images/rajasthan.jpg');--tint-opacity:0.4;"><span class="dest-tag">🏰 Heritage</span><div class="dest-label"><strong>Rajasthan</strong><span>Land of Kings</span></div></div>
+      <div class="dest-card reveal" style="--tint-a:#003a3a;--tint-opacity:0.9;background:linear-gradient(100deg,#003a3a,#1a6a5a);"><span class="dest-tag">🏖️ Beach</span><div class="dest-label"><strong>Goa</strong><span>Sun, Sand &amp; Coast</span></div></div>
+      <div class="dest-card reveal" style="background-image:url('images/himachal.jpg');--tint-opacity:0.35;"><span class="dest-tag">🏔️ Hills</span><div class="dest-label"><strong>Himachal Pradesh</strong><span>Mountains &amp; Valleys</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== BOOKING FORM ===================== -->
+<section class="booking-section" id="booking">
+  <div class="container">
+    <div class="booking-card reveal">
+      <h2>Quick Booking Request</h2>
+      <p class="sub-note" data-en="Fill the form below — we'll receive your details on WhatsApp and get back to you quickly.">फॉर्म भरें — हम आपकी जानकारी WhatsApp पर प्राप्त करेंगे और जल्द संपर्क करेंगे।</p>
+
+      <form id="bookingForm" novalidate>
+        <div class="form-grid">
+          <div class="field">
+            <label for="name">पूरा नाम <span class="req">*</span></label>
+            <input type="text" id="name" name="name" placeholder="आपका नाम" required>
+          </div>
+          <div class="field">
+            <label for="mobile">Mobile Number <span class="req">*</span></label>
+            <input type="tel" id="mobile" name="mobile" placeholder="10 अंकों का मोबाइल नंबर" pattern="[6-9][0-9]{9}" maxlength="10" required>
+          </div>
+          <div class="field">
+            <label for="passengers">यात्रियों की संख्या</label>
+            <input type="number" id="passengers" name="passengers" min="1" placeholder="जैसे: 4">
+          </div>
+
+          <div class="field">
+            <label for="pickup">Pickup Location <span class="req">*</span></label>
+            <input type="text" id="pickup" name="pickup" placeholder="कहाँ से यात्रा शुरू होगी" required>
+          </div>
+          <div class="field">
+            <label for="destination">Destination <span class="req">*</span></label>
+            <input type="text" id="destination" name="destination" placeholder="कहाँ जाना है" required>
+          </div>
+          <div class="field">
+            <label for="vehicle">Vehicle Type <span class="req">*</span></label>
+            <select id="vehicle" name="vehicle" required>
+              <option value="" disabled selected>वाहन चुनें</option>
+              <option>Car</option>
+              <option>Sedan</option>
+              <option>SUV</option>
+              <option>Bolero</option>
+              <option>Innova-type</option>
+              <option>Tempo Traveller</option>
+              <option>Bus</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="journeyDate">Journey Date <span class="req">*</span></label>
+            <input type="date" id="journeyDate" name="journeyDate" required>
+          </div>
+          <div class="field">
+            <label for="returnDate">Return Date (वैकल्पिक)</label>
+            <input type="date" id="returnDate" name="returnDate">
+          </div>
+          <div class="field">
+            <label>Trip Type</label>
+            <div class="trip-toggle">
+              <label><input type="radio" name="tripType" value="One Way" checked><span>One Way</span></label>
+              <label><input type="radio" name="tripType" value="Round Trip"><span>Round Trip</span></label>
+            </div>
+          </div>
+
+          <div class="field full">
+            <label for="requirement">Additional Requirement</label>
+            <textarea id="requirement" name="requirement" rows="3" placeholder="कोई खास ज़रूरत हो तो यहाँ लिखें (जैसे: AC वाहन, सुबह जल्दी pickup, आदि)"></textarea>
+          </div>
+        </div>
+
+        <div class="form-submit-row">
+          <button type="submit" class="submit-btn" data-en="Send Booking Request">Booking Request भेजें</button>
+          <span class="form-hint" data-en="WhatsApp will open automatically with your details filled in.">Submit करते ही WhatsApp खुलेगा और आपकी जानकारी भर जाएगी।</span>
+        </div>
+
+        <div class="form-msg" id="formMsg" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div class="road-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 34" preserveAspectRatio="none"><line x1="0" y1="17" x2="1200" y2="17" stroke="#c9932e" stroke-width="2" stroke-dasharray="16 14"/></svg>
+</div>
+
+<!-- ===================== STATS BAND ===================== -->
+<!-- EDIT HERE: update these numbers with your real figures once available -->
+<section class="section-pad stats-band">
+  <div class="container">
+    <div class="section-head reveal" style="max-width:520px;">
+      <div class="eyebrow" style="background:rgba(255,255,255,0.08);color:var(--saffron-light);" data-en="Why Travel With Us">क्यों हमारे साथ यात्रा करें</div>
+      <h2 style="color:var(--white);" data-en="Trusted by Travelers &amp; Pilgrims">यात्रियों और श्रद्धालुओं का भरोसा</h2>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-item reveal"><strong>500+</strong><span data-en="Happy Travelers">Happy Travelers</span></div>
+      <div class="stat-item reveal"><strong>4.8★</strong><span data-en="Average Rating">Average Rating</span></div>
+      <div class="stat-item reveal"><strong>100%</strong><span data-en="Verified Vehicles">Verified Vehicles</span></div>
+      <div class="stat-item reveal"><strong>All India</strong><span data-en="City Coverage">City Coverage</span></div>
+      <div class="stat-item reveal"><strong>24/7</strong><span data-en="Customer Support">Customer Support</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="road-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 34" preserveAspectRatio="none"><line x1="0" y1="17" x2="1200" y2="17" stroke="#c9932e" stroke-width="2" stroke-dasharray="16 14"/></svg>
+</div>
+
+<!-- ===================== SERVICES / VEHICLES ===================== -->
+<section class="section-pad" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="Our Services">हमारी सेवाएँ</div>
+      <h2 data-en="The Right Vehicle for Every Journey">हर यात्रा के लिए सही वाहन</h2>
+      <p data-en="Wedding, pilgrimage, family trip or corporate travel — we arrange the right vehicle for you through a trusted partner network.">शादी हो, तीर्थ यात्रा हो, family trip हो या corporate travel — हम आपकी ज़रूरत के अनुसार trusted partner network से वाहन arrange करवाते हैं।</p>
+    </div>
+
+    <div class="vehicle-grid" id="vehicles">
+      <div class="vcard reveal">
+        <div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 13h18M5 13V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v6M4 17h1a1 1 0 0 0 1-1v-1H4v2zm14 0h1v-2h-2v1a1 1 0 0 0 1 1zM7 13v4M17 13v4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>🚌 सभी प्रकार की Bus Booking</h3>
+        <p>Mini • Semi Sleeper • AC • Group Travel के लिए बस बुकिंग।</p>
+        <a href="#booking" class="vlink">बुक करें <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="vcard reveal">
+        <div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M2 15h20M4 15V9a2 2 0 0 1 2-2h9l5 5v3" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg></div>
+        <h3>🚐 Tempo Traveller Booking</h3>
+        <p>9 • 12 • 17 • 20 • 26 • 32 Seater — group के आकार अनुसार वाहन।</p>
+        <a href="#booking" class="vlink">बुक करें <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="vcard reveal">
+        <div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 13l2-5a2 2 0 0 1 2-1h10a2 2 0 0 1 2 1l2 5" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="13" width="20" height="5" rx="1"/><circle cx="7" cy="18" r="1.6"/><circle cx="17" cy="18" r="1.6"/></svg></div>
+        <h3>🚗 सभी प्रकार की Car Booking</h3>
+        <p>Sedan • SUV • Premium Cars — local और outstation दोनों के लिए।</p>
+        <a href="#booking" class="vlink">बुक करें <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="vcard reveal">
+        <div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 12l1.5-5A2 2 0 0 1 6.4 5.5h11.2A2 2 0 0 1 19.5 7L21 12" stroke-linecap="round" stroke-linejoin="round"/><rect x="2" y="12" width="20" height="6" rx="1.4"/><circle cx="7" cy="18.5" r="1.6"/><circle cx="17" cy="18.5" r="1.6"/></svg></div>
+        <h3>🚙 SUV / Bolero / Innova-type</h3>
+        <p>ऊबड़-खाबड़ रास्तों और family travel के लिए मज़बूत वाहन।</p>
+        <a href="#booking" class="vlink">बुक करें <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="vcard reveal">
+        <div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="9" cy="7" r="3"/><path d="M2 20c0-3.5 3-6 7-6s7 2.5 7 6" stroke-linecap="round"/><circle cx="18" cy="8" r="2.4"/><path d="M15.5 20c.3-2.6 2-4.5 4.5-4.8" stroke-linecap="round"/></svg></div>
+        <h3>👨‍👩‍👧‍👦 Family & Group Travel</h3>
+        <p>बड़े समूह के लिए आरामदायक और सुरक्षित वाहन व्यवस्था।</p>
+        <a href="#booking" class="vlink">बुक करें <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+
+      <div class="vcard reveal">
+        <div class="vicon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 3v18M6 8l6-5 6 5M8 21v-6a4 4 0 0 1 8 0v6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>💍 शादी एवं कार्यक्रमों के लिए वाहन</h3>
+        <p>बारात, रिसेप्शन एवं अन्य आयोजनों के लिए विशेष वाहन व्यवस्था।</p>
+        <a href="#booking" class="vlink">बुक करें <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:30px;" class="reveal">
+      <span style="color:var(--ink-soft);font-size:0.95rem;">🛕 धार्मिक यात्रा • 🏙️ Local & Outstation • 🛣️ One Way & Round Trip • 🚉 Railway Pickup/Drop • ✈️ Airport Pickup/Drop</span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ALL INDIA ===================== -->
+<section class="section-pad all-india">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" style="background:rgba(255,255,255,0.1);color:var(--saffron-light);">All India Coverage</div>
+      <h2 data-en="Booking Available for Any City in India">भारत के किसी भी शहर के लिए बुकिंग</h2>
+      <p data-en="Travel anywhere in India, arranged through our trusted partner travel network.">Trusted partner travel network के माध्यम से भारत में कहीं भी यात्रा arrange करवाई जा सकती है।</p>
+    </div>
+    <div class="city-grid reveal">
+      <span class="city-chip">Delhi</span>
+      <span class="city-chip">Mumbai</span>
+      <span class="city-chip">Jaipur</span>
+      <span class="city-chip">Lucknow</span>
+      <span class="city-chip">Varanasi</span>
+      <span class="city-chip">Prayagraj</span>
+      <span class="city-chip">Ayodhya</span>
+      <span class="city-chip">Agra</span>
+      <span class="city-chip">Haridwar</span>
+      <span class="city-chip">Mathura</span>
+      <span class="city-chip">Udaipur</span>
+      <span class="city-chip">Chandigarh</span>
+      <span class="city-chip">और भी कई शहर</span>
+    </div>
+    <p class="note reveal">Vehicle availability यात्रा की तारीख, स्थान और vehicle type पर निर्भर करती है।</p>
+  </div>
+</section>
+
+<!-- ===================== WHY CHOOSE US ===================== -->
+<section class="section-pad" id="about">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="Why Choose Us">क्यों चुनें हमें</div>
+      <h2 data-en="Why Choose Raaspriya Travels">Raaspriya Travels क्यों चुनें</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.4 8.5-8 10-4.6-1.5-8-5-8-10V6l8-4z" stroke-linejoin="round"/></svg></div>
+        <h3 data-en="Reliable Service">विश्वसनीय सेवा</h3>
+        <p data-en="Vehicle arrangement through trusted travel partners.">Trusted travel partners के माध्यम से vehicle arrangement।</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 13l1.5-5A2 2 0 0 1 6.4 6.5h11.2A2 2 0 0 1 19.5 8L21 13M3 13h18v4H3z" stroke-linejoin="round"/></svg></div>
+        <h3 data-en="Every Vehicle Type">सभी प्रकार के वाहन</h3>
+        <p data-en="From cars to buses and tempo travellers.">Car से लेकर Bus और Tempo Traveller तक।</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v9l6 3" stroke-linecap="round"/></svg></div>
+        <h3>All India Booking</h3>
+        <p data-en="Travel arrangements for cities across India.">भारत के विभिन्न शहरों के लिए travel arrangements।</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke-linejoin="round"/></svg></div>
+        <h3 data-en="Easy Booking">आसान Booking</h3>
+        <p data-en="Booking request over call or WhatsApp.">Call या WhatsApp से booking request।</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3"/><path d="M2 20c0-3.3 2.8-5.6 7-5.6s7 2.3 7 5.6" stroke-linecap="round"/><circle cx="18" cy="8" r="2.2"/></svg></div>
+        <h3>Family & Group Friendly</h3>
+        <p data-en="Options for weddings, events, picnics and group travel.">शादी, कार्यक्रम, picnic और group travel के लिए options।</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="wicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 12l3 3 5-6M21 12c0 5-4 9-9 9s-9-4-9-9 4-9 9-9c1.6 0 3 .4 4.4 1.2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3 data-en="Clear Communication">साफ Communication</h3>
+        <p data-en="Vehicle and journey details are shared clearly before booking.">Booking से पहले vehicle और यात्रा की जानकारी स्पष्ट रूप से बताई जाती है।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== HOW IT WORKS ===================== -->
+<section class="section-pad" id="how-it-works" style="background:var(--beige);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="Process">प्रक्रिया</div>
+      <h2>How It Works</h2>
+      <p data-en="From booking to journey — a simple, transparent process.">बुकिंग से लेकर यात्रा तक — पूरी प्रक्रिया सरल और पारदर्शी।</p>
+    </div>
+    <div class="steps-wrap reveal">
+      <div class="steps-line" aria-hidden="true"></div>
+      <div class="steps-grid">
+        <div class="step">
+          <div class="step-num">1</div>
+          <h3>Booking Request</h3>
+          <p data-en="Share your journey details with us.">आप अपनी यात्रा की जानकारी भेजें।</p>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3>Requirement Check</h3>
+          <p data-en="We review your date, route and vehicle requirement.">हम आपकी तारीख, route और vehicle requirement समझें।</p>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3>Vehicle Arrangement</h3>
+          <p data-en="A suitable vehicle is arranged through our trusted partner network.">Trusted partner travel network से suitable vehicle arrange किया जाए।</p>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3 data-en="Journey Begins">यात्रा शुरू</h3>
+          <p data-en="Your trip is ready once vehicle and driver details are confirmed.">Vehicle/driver details confirmation के बाद यात्रा की तैयारी।</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SPECIAL BOOKINGS ===================== -->
+<section class="section-pad">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow">Special Bookings</div>
+      <h2 data-en="Booking for Special Occasions">खास अवसरों के लिए बुकिंग</h2>
+    </div>
+    <div class="special-grid reveal">
+      <div class="special-item"><div class="sicon">💍</div><span>Wedding Booking</span></div>
+      <div class="special-item"><div class="sicon">👨‍👩‍👧‍👦</div><span>Family Trips</span></div>
+      <div class="special-item"><div class="sicon">🛕</div><span>Religious Tours</span></div>
+      <div class="special-item"><div class="sicon">🎓</div><span>School/College Trips</span></div>
+      <div class="special-item"><div class="sicon">🏢</div><span>Corporate/Group Travel</span></div>
+      <div class="special-item"><div class="sicon">✈️</div><span>Airport Transfers</span></div>
+      <div class="special-item"><div class="sicon">🚉</div><span>Railway Transfers</span></div>
+      <div class="special-item"><div class="sicon">🛣️</div><span>Long Distance Travel</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section class="section-pad" id="contact" style="background:var(--beige);">
+  <div class="container">
+    <div class="contact-wrap">
+      <div class="contact-info reveal">
+        <div class="eyebrow" data-en="Get in Touch">संपर्क करें</div>
+        <h2 data-en="Contact Us Today for Booking">बुकिंग के लिए आज ही संपर्क करें</h2>
+        <p data-en="Send your journey details over call or WhatsApp — we'll respond quickly.">Call या WhatsApp पर अपनी यात्रा की जानकारी भेजें — हम जल्द जवाब देंगे।</p>
+        <ul class="contact-list">
+          <li>
+            <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.7a2 2 0 0 1 1.8 2.1z" stroke-linejoin="round"/></svg></div>
+            <div>
+              <strong>Phone</strong>
+              <!-- EDIT HERE: real phone number -->
+              <span>+91 8005005453</span>
+            </div>
+          </li>
+          <li>
+            <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.4 8.4 0 0 1-8.9 8.4 8.5 8.5 0 0 1-3.8-.9L3 20l1.1-5.1a8.4 8.4 0 0 1-1-4A8.4 8.4 0 0 1 11.6 3a8.5 8.5 0 0 1 9.4 8.5z" stroke-linejoin="round"/></svg></div>
+            <div>
+              <strong>WhatsApp</strong>
+              <!-- EDIT HERE: real WhatsApp number -->
+              <span>+91 8005005453</span>
+            </div>
+          </li>
+          <li>
+            <div class="cicon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21z" stroke-linejoin="round"/><circle cx="12" cy="9.5" r="2.3"/></svg></div>
+            <div>
+              <strong>Location</strong>
+              <!-- EDIT HERE: real business location -->
+              <span>[Your Local Area]</span>
+            </div>
+          </li>
+        </ul>
+        <div class="contact-btns">
+          <a href="tel:+918005005453" class="btn btn-primary">📞 Call Now</a>
+          <a href="#" id="contactWhatsapp" class="btn btn-whatsapp">💬 WhatsApp Booking</a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <h3 data-en="Need a Quick Reply?">तुरंत जवाब चाहिए?</h3>
+        <p data-en="Message us on WhatsApp — share your name, pickup, destination and date.">WhatsApp पर मैसेज करें — Name, Pickup, Destination और Date बताएं।</p>
+        <svg viewBox="0 0 300 140" width="100%" style="margin-top:10px;">
+          <rect x="0" y="0" width="300" height="140" rx="16" fill="rgba(255,255,255,0.05)"/>
+          <rect x="20" y="20" width="180" height="16" rx="8" fill="rgba(255,255,255,0.18)"/>
+          <rect x="20" y="46" width="140" height="16" rx="8" fill="rgba(255,255,255,0.14)"/>
+          <rect x="20" y="72" width="160" height="16" rx="8" fill="rgba(255,255,255,0.14)"/>
+          <circle cx="255" cy="95" r="26" fill="#25D366"/>
+          <path d="M247 95a8 8 0 1 1 5 7l-7 2 2-6a7.9 7.9 0 0 1-0-3z" fill="#06340f"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== GALLERY ===================== -->
+<!-- EDIT HERE: replace each gallery-item's gradient with a real <img> photo when ready -->
+<section class="section-pad" style="background:var(--beige);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="Gallery">गैलरी</div>
+      <h2 data-en="Moments From Our Journeys">हमारी यात्राओं की झलक</h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item tall reveal" style="background-image:url('images/varanasi-2.jpg');background-size:cover;background-position:center;"><span>Varanasi</span></div>
+      <div class="gallery-item reveal" style="background-image:url('images/ayodhya.webp');background-size:cover;background-position:center;"><span>Ayodhya</span></div>
+      <div class="gallery-item reveal" style="background-image:url('images/agra-tomb.jpg');background-size:cover;background-position:center;"><span>Agra</span></div>
+      <div class="gallery-item reveal" style="--tint-a:#4a1220;--tint-b:#c94f6a;"><span>Wedding Trip</span></div>
+      <div class="gallery-item tall reveal" style="background-image:url('images/himachal.jpg');background-size:cover;background-position:center;"><span>Himachal</span></div>
+      <div class="gallery-item reveal" style="--tint-a:#003a3a;--tint-b:#1a8a7a;"><span>Goa</span></div>
+      <div class="gallery-item reveal" style="background-image:url('images/mathura-vrindavan.webp');background-size:cover;background-position:center;"><span>Mathura</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== TESTIMONIALS ===================== -->
+<section class="section-pad" style="background:var(--beige);">
+  <div class="container">
+    <div class="section-head reveal">
+      <div class="eyebrow" data-en="Traveler Reviews">यात्रियों की राय</div>
+      <h2 data-en="What Our Travelers Say">हमारे यात्रियों का अनुभव</h2>
+      <p data-en="Real feedback from families, groups and pilgrims we've helped travel across India.">परिवार, समूह और तीर्थयात्रियों की असली प्रतिक्रिया।</p>
+    </div>
+    <div class="testi-grid">
+      <!-- EDIT HERE: replace with your real customer reviews -->
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote" data-en="&ldquo;Booking was simple over WhatsApp and the vehicle arrived exactly on time for our family trip.&rdquo;">"WhatsApp पर booking बहुत आसान थी और हमारी family trip के लिए वाहन समय पर पहुंचा।"</p>
+        <div class="testi-person">
+          <div class="testi-avatar">R</div>
+          <div><strong>Traveler Name</strong><span data-en="Family Trip">Family Trip</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote" data-en="&ldquo;We booked a Tempo Traveller for a wedding group — smooth communication and a comfortable vehicle.&rdquo;">"शादी के group के लिए Tempo Traveller बुक किया — communication अच्छी थी और वाहन आरामदायक था।"</p>
+        <div class="testi-person">
+          <div class="testi-avatar">S</div>
+          <div><strong>Traveler Name</strong><span data-en="Wedding Group">Wedding Group</span></div>
+        </div>
+      </div>
+      <div class="testi-card reveal">
+        <div class="testi-stars">★★★★★</div>
+        <p class="quote" data-en="&ldquo;Trustworthy service for our pilgrimage tour — clear pricing and a helpful driver throughout the trip.&rdquo;">"हमारी तीर्थ यात्रा के लिए भरोसेमंद सेवा — साफ pricing और मददगार driver।"</p>
+        <div class="testi-person">
+          <div class="testi-avatar">A</div>
+          <div><strong>Traveler Name</strong><span data-en="Religious Tour">Religious Tour</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="verified-strip reveal">
+      <span class="verified-chip"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><span data-en="Verified WhatsApp Business">Verified WhatsApp Business</span></span>
+      <span class="verified-chip"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><span data-en="Trusted Partner Network">Trusted Partner Network</span></span>
+      <span class="verified-chip"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg><span data-en="Secure &amp; Private Booking">Secure &amp; Private Booking</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <strong>RAASPRIYA TRAVELS</strong>
+        <p>“आप जहाँ चाहें, हम वहाँ आपके साथ हैं।”</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#booking">Booking</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2026 Raaspriya Travels. All Rights Reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== STICKY MOBILE CALL/WHATSAPP BAR ===================== -->
+<div class="sticky-mobile-bar">
+  <a href="tel:+918005005453" class="call">📞 Call Now</a>
+  <a href="#" id="mobileWhatsapp" class="wa">💬 WhatsApp</a>
+</div>
+
+<script>
+/* ============================================================
+   EDIT HERE — SITE SETTINGS
+   Change WHATSAPP_NUMBER to your real WhatsApp business number.
+   Format: country code + number, NO plus sign, NO spaces.
+   Example: "91XXXXXXXXXX"  ->  "919876543210"
+   ============================================================ */
+const SITE_SETTINGS = {
+  WHATSAPP_NUMBER: "918005005453", // <-- EDIT HERE: real WhatsApp number
+  BUSINESS_NAME: "Raaspriya Travels"
+};
+
+/* ---------- EN / HI language toggle ---------- */
+const langEls = document.querySelectorAll('[data-en]');
+langEls.forEach(el => { el.dataset.hiOriginal = el.innerHTML; });
+
+function setLanguage(lang){
+  langEls.forEach(el => {
+    el.innerHTML = lang === 'en' ? el.dataset.en : el.dataset.hiOriginal;
+  });
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.documentElement.setAttribute('lang', lang);
+}
+
+document.querySelectorAll('.lang-toggle button').forEach(btn => {
+  btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+});
+
+/* ---------- Mobile menu toggle ---------- */
+const hamburgerBtn = document.getElementById('hamburgerBtn');
+const navbar = document.getElementById('navbar');
+const mobileMenu = document.getElementById('mobileMenu');
+
+hamburgerBtn.addEventListener('click', () => {
+  const isOpen = navbar.classList.toggle('open');
+  hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+});
+
+document.querySelectorAll('.mobile-menu a').forEach(link => {
+  link.addEventListener('click', () => {
+    navbar.classList.remove('open');
+    hamburgerBtn.setAttribute('aria-expanded', 'false');
+  });
+});
+
+/* ---------- Simple WhatsApp quick-contact links (no form data) ---------- */
+function buildBasicWhatsAppLink(){
+  const msg = `नमस्ते ${SITE_SETTINGS.BUSINESS_NAME}, मुझे यात्रा बुकिंग के बारे में जानकारी चाहिए।`;
+  return `https://wa.me/${SITE_SETTINGS.WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+['heroWhatsapp','contactWhatsapp','mobileWhatsapp'].forEach(id=>{
+  const el = document.getElementById(id);
+  if(el){ el.href = buildBasicWhatsAppLink(); el.target = "_blank"; el.rel = "noopener"; }
+});
+
+/* ---------- Booking form logic ---------- */
+const bookingForm = document.getElementById('bookingForm');
+const formMsg = document.getElementById('formMsg');
+
+// Set min date = today for date pickers
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('journeyDate').setAttribute('min', today);
+document.getElementById('returnDate').setAttribute('min', today);
+
+function showMsg(text, type){
+  formMsg.textContent = text;
+  formMsg.className = `form-msg show ${type}`;
+}
+
+bookingForm.addEventListener('submit', function(e){
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const mobile = document.getElementById('mobile').value.trim();
+  const pickup = document.getElementById('pickup').value.trim();
+  const destination = document.getElementById('destination').value.trim();
+  const vehicle = document.getElementById('vehicle').value;
+  const journeyDate = document.getElementById('journeyDate').value;
+  const returnDate = document.getElementById('returnDate').value;
+  const passengers = document.getElementById('passengers').value.trim();
+  const requirement = document.getElementById('requirement').value.trim();
+  const tripType = document.querySelector('input[name="tripType"]:checked').value;
+
+  // 1. Validate required fields
+  const mobilePattern = /^[6-9][0-9]{9}$/;
+  if(!name || !mobile || !pickup || !destination || !vehicle || !journeyDate){
+    showMsg('कृपया सभी आवश्यक (*) फ़ील्ड सही तरीके से भरें।', 'error');
+    return;
+  }
+  if(!mobilePattern.test(mobile)){
+    showMsg('कृपया एक सही 10 अंकों का मोबाइल नंबर दर्ज करें।', 'error');
+    return;
+  }
+
+  // 2. Build WhatsApp message with all booking details
+  const lines = [
+    `*नई Booking Request — ${SITE_SETTINGS.BUSINESS_NAME}*`,
+    `नाम: ${name}`,
+    `मोबाइल नंबर: ${mobile}`,
+    `Pickup Location: ${pickup}`,
+    `Destination: ${destination}`,
+    `Journey Date: ${journeyDate}`,
+    returnDate ? `Return Date: ${returnDate}` : null,
+    `Trip Type: ${tripType}`,
+    `Vehicle Type: ${vehicle}`,
+    passengers ? `यात्रियों की संख्या: ${passengers}` : null,
+    requirement ? `Additional Requirement: ${requirement}` : null
+  ].filter(Boolean);
+
+  const message = lines.join('\n');
+  const waLink = `https://wa.me/${SITE_SETTINGS.WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+  // 3. Show success message
+  showMsg('धन्यवाद! आपकी बुकिंग जानकारी तैयार है — WhatsApp खोला जा रहा है...', 'success');
+
+  // 4. Open WhatsApp with the generated message
+  window.open(waLink, '_blank', 'noopener');
+
+  bookingForm.reset();
+  document.getElementById('journeyDate').setAttribute('min', today);
+  document.getElementById('returnDate').setAttribute('min', today);
+});
+
+/* ---------- Scroll reveal animation ---------- */
+const revealEls = document.querySelectorAll('.reveal');
+const io = new IntersectionObserver((entries)=>{
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add('in');
+      io.unobserve(entry.target);
+    }
+  });
+},{threshold:0.12});
+revealEls.forEach(el=>io.observe(el));
+</script>
+
+</body>
+</html>
