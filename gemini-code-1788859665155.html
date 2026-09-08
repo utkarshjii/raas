@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raaspriya Travels | Premium Heritage & Luxury Travel</title>
+    <meta name="description" content="Discover the true essence of India with Raaspriya Travels. Safe, vetted, and luxurious travel arrangements, heritage tours, and premium vehicle bookings.">
+    
+    <!-- Google Fonts: Playfair Display (Headings) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            navy: '#0A1930',
+                            maroon: '#8E1628',
+                            gold: '#C69C38',
+                            cream: '#FDFBF7',
+                            white: '#FFFFFF'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    boxShadow: {
+                        'premium': '0 20px 40px -15px rgba(10, 25, 48, 0.15)',
+                        'gold-glow': '0 0 15px rgba(198, 156, 56, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for Animations -->
+    <style>
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-delay-1 { transition-delay: 100ms; }
+        .reveal-delay-2 { transition-delay: 200ms; }
+        .reveal-delay-3 { transition-delay: 300ms; }
+
+        #navbar.scrolled {
+            background-color: rgba(10, 25, 48, 0.98);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+        }
+        
+        .premium-input:focus {
+            outline: none;
+            border-color: #C69C38;
+            box-shadow: 0 0 0 2px rgba(198, 156, 56, 0.1);
+        }
+
+        .card-gradient::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(10, 25, 48, 0.9) 0%, rgba(10, 25, 48, 0.2) 50%, transparent 100%);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="bg-brand-cream text-brand-navy font-sans antialiased selection:bg-brand-gold selection:text-white pb-14 md:pb-0">
+
+    <!-- Floating WhatsApp Button (Visible on Desktop/Laptop) -->
+    <a href="https://wa.me/918005005453" target="_blank" class="hidden md:flex fixed bottom-6 right-6 z-50 bg-green-500 text-white w-14 h-14 rounded-full items-center justify-center shadow-premium hover:scale-110 transition-transform duration-300 hover:shadow-gold-glow animate-bounce" style="animation-duration: 3s;">
+        <i class="fa-brands fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Sticky Bottom Bar (Visible ONLY on Mobile) -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full z-50 flex shadow-[0_-4px_15px_rgba(0,0,0,0.1)]">
+        <a href="tel:+918005005453" class="flex-1 bg-brand-navy flex justify-center items-center py-3.5 text-white font-semibold text-sm border-r border-brand-gold/30 active:bg-brand-maroon transition-colors">
+            <i class="fa-solid fa-phone mr-2 text-brand-gold"></i> Call Now
+        </a>
+        <a href="https://wa.me/918005005453" target="_blank" class="flex-1 bg-green-600 flex justify-center items-center py-3.5 text-white font-semibold text-sm active:bg-green-700 transition-colors">
+            <i class="fa-brands fa-whatsapp text-lg mr-2"></i> WhatsApp
+        </a>
+    </div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="fixed w-full z-50 top-0 transition-all duration-500 pt-4 pb-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="bg-brand-white/95 p-1.5 rounded-lg shadow-md transition-all duration-300 group-hover:shadow-gold-glow">
+                        <img src="Raaspriya Travels_ Journeys With Devotion (1).png" alt="Raaspriya Travels Logo" class="h-10 md:h-16 w-auto object-contain">
+                    </div>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#destinations" class="text-brand-cream/90 hover:text-brand-gold font-medium text-sm tracking-wide transition-colors">Destinations</a>
+                    <a href="#fleet" class="text-brand-cream/90 hover:text-brand-gold font-medium text-sm tracking-wide transition-colors">Luxury Fleet</a>
+                    <a href="#trust" class="text-brand-cream/90 hover:text-brand-gold font-medium text-sm tracking-wide transition-colors">Why Us</a>
+                    <a href="#contact" class="text-brand-cream/90 hover:text-brand-gold font-medium text-sm tracking-wide transition-colors">Contact</a>
+                    <a href="#booking" class="bg-brand-maroon hover:bg-red-800 text-white px-6 py-2.5 rounded-sm font-semibold text-sm tracking-wider shadow-lg hover:shadow-premium transition-all duration-300 border border-brand-maroon hover:border-brand-gold">
+                        Request Booking
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-brand-cream hover:text-brand-gold focus:outline-none p-2 bg-brand-navy/50 rounded backdrop-blur-sm">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Overlay -->
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-brand-navy/98 backdrop-blur-md border-t border-brand-gold/20 shadow-premium">
+            <div class="flex flex-col px-4 py-6 space-y-5 text-center">
+                <a href="#destinations" class="text-brand-cream hover:text-brand-gold font-medium text-lg">Destinations</a>
+                <a href="#fleet" class="text-brand-cream hover:text-brand-gold font-medium text-lg">Luxury Fleet</a>
+                <a href="#trust" class="text-brand-cream hover:text-brand-gold font-medium text-lg">Why Us</a>
+                <a href="#contact" class="text-brand-cream hover:text-brand-gold font-medium text-lg">Contact</a>
+                <a href="#booking" class="bg-brand-maroon text-white px-6 py-3 rounded-sm font-semibold mx-4 mt-2">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative h-[85vh] min-h-[500px] md:min-h-[600px] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 w-full h-full">
+            <!-- Updated Hero Image Path -->
+            <img src="./shri-kashi-vishwanath.jpg" alt="Shri Kashi Vishwanath Ji Varanasi" class="w-full h-full object-cover object-center scale-105 animate-[pulse_20s_ease-in-out_infinite_alternate]" onerror="this.src='https://images.unsplash.com/photo-1590050559139-775bfe24fb4d?q=80&w=2070&auto=format&fit=crop';">
+            <div class="absolute inset-0 bg-brand-navy/70 mix-blend-multiply"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-brand-navy/80 via-transparent to-brand-cream/100"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-16 md:mt-16 reveal-up">
+            <span class="block text-brand-gold text-[10px] md:text-sm font-semibold tracking-[0.2em] md:tracking-[0.3em] uppercase mb-4 md:mb-6 drop-shadow-md">
+                <i class="fa-solid fa-crown mr-1 md:mr-2"></i> Premium Indian Travel Concierge
+            </span>
+            <h1 class="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-white leading-tight drop-shadow-lg mb-4 md:mb-6">
+                Discover the True Essence of India. <br>
+                <span class="italic font-light text-brand-cream/90 text-2xl sm:text-3xl md:text-5xl lg:text-6xl">Safe, Vetted, and Luxurious.</span>
+            </h1>
+            <p class="text-sm sm:text-base md:text-xl text-brand-cream/80 max-w-2xl mx-auto font-light leading-relaxed mb-10 drop-shadow">
+                Bespoke itineraries, premium chauffeurs, and world-class fleet arrangements for discerning global and domestic travelers.
+            </p>
+        </div>
+    </header>
+
+    <!-- Booking Engine Widget -->
+    <section id="booking" class="relative z-20 -mt-20 md:-mt-32 px-4 max-w-7xl mx-auto reveal-up reveal-delay-1">
+        <div class="bg-white rounded-lg shadow-premium border-t-4 border-brand-maroon p-5 md:p-8">
+            <div class="flex items-center justify-between mb-4 md:mb-6">
+                <h2 class="text-lg md:text-2xl font-serif font-bold text-brand-navy">Plan Your Expedition</h2>
+                <div class="text-[10px] md:text-xs font-semibold tracking-wider text-brand-gold uppercase"><i class="fa-solid fa-lock mr-1"></i> Secure Booking</div>
+            </div>
+            
+            <form id="premium-booking-form" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <div class="col-span-1 border border-gray-200 rounded-sm p-2.5 focus-within:border-brand-gold transition-colors">
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Pick-up Location</label>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-location-dot text-brand-gold mr-2 text-sm"></i>
+                        <input type="text" id="pickup" required placeholder="City or Airport" class="w-full text-sm font-medium text-brand-navy premium-input border-none bg-transparent">
+                    </div>
+                </div>
+
+                <div class="col-span-1 border border-gray-200 rounded-sm p-2.5 focus-within:border-brand-gold transition-colors">
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Destination</label>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-map text-brand-gold mr-2 text-sm"></i>
+                        <input type="text" id="destination" required placeholder="Heritage Site / City" class="w-full text-sm font-medium text-brand-navy premium-input border-none bg-transparent">
+                    </div>
+                </div>
+
+                <div class="col-span-1 border border-gray-200 rounded-sm p-2.5 focus-within:border-brand-gold transition-colors">
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Journey Date</label>
+                    <div class="flex items-center">
+                        <i class="fa-regular fa-calendar text-brand-gold mr-2 text-sm"></i>
+                        <input type="date" id="date" required class="w-full text-sm font-medium text-brand-navy premium-input border-none bg-transparent">
+                    </div>
+                </div>
+
+                <div class="col-span-1 border border-gray-200 rounded-sm p-2.5 focus-within:border-brand-gold transition-colors">
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-gray-500 mb-1">Vehicle Class</label>
+                    <div class="flex items-center">
+                        <i class="fa-solid fa-car text-brand-gold mr-2 text-sm"></i>
+                        <select id="vehicle" required class="w-full text-sm font-medium text-brand-navy premium-input border-none bg-transparent cursor-pointer">
+                            <option value="">Select Class</option>
+                            <option value="Premium Sedan">Premium Sedan (1-3 Guests)</option>
+                            <option value="Luxury SUV">Luxury SUV / Innova (4-6 Guests)</option>
+                            <option value="Tempo Traveller">Tempo Traveller (9-17 Guests)</option>
+                            <option value="Tourist Coach">Tourist Coach (Large Group)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-span-1 sm:col-span-2 lg:col-span-1 flex flex-col justify-end">
+                    <button type="submit" class="w-full h-12 md:h-[52px] bg-brand-navy hover:bg-brand-gold text-white rounded-sm font-semibold text-sm tracking-wide transition-colors duration-300 flex items-center justify-center gap-2">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Request Quote
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Trust Indicators Bar -->
+    <section id="trust" class="py-10 md:py-12 bg-brand-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 border-y border-brand-gold/20 py-6 md:py-8">
+                <div class="flex items-start gap-4 reveal-up">
+                    <div class="bg-brand-navy rounded-full p-2.5 md:p-3 text-brand-gold flex-shrink-0">
+                        <i class="fa-solid fa-user-tie text-lg md:text-xl w-5 md:w-6 text-center"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-brand-navy text-sm md:text-base">Vetted Chauffeurs</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">100% background-checked, English-speaking professional drivers.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 reveal-up reveal-delay-1">
+                    <div class="bg-brand-navy rounded-full p-2.5 md:p-3 text-brand-gold flex-shrink-0">
+                        <i class="fa-solid fa-shield-halved text-lg md:text-xl w-5 md:w-6 text-center"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-brand-navy text-sm md:text-base">No Hidden Costs</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">Fully transparent pricing structure. Zero surprise roadside charges.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 reveal-up reveal-delay-2">
+                    <div class="bg-brand-navy rounded-full p-2.5 md:p-3 text-brand-gold flex-shrink-0">
+                        <i class="fa-solid fa-earth-americas text-lg md:text-xl w-5 md:w-6 text-center"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-brand-navy text-sm md:text-base">Global Concierge</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">24/7 dedicated WhatsApp support for international time zones.</p>
+                    </div>
+                </div>
+                <div class="flex items-start gap-4 reveal-up reveal-delay-3">
+                    <div class="bg-brand-navy rounded-full p-2.5 md:p-3 text-brand-gold flex-shrink-0">
+                        <i class="fa-solid fa-location-crosshairs text-lg md:text-xl w-5 md:w-6 text-center"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-brand-navy text-sm md:text-base">GPS Tracked Fleet</h4>
+                        <p class="text-xs text-gray-500 mt-1 leading-relaxed">Modern, air-conditioned vehicles monitored for your ultimate safety.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Fleet Showcase -->
+    <section id="fleet" class="py-16 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-16 reveal-up">
+                <span class="text-brand-gold font-semibold uppercase text-[10px] md:text-xs tracking-[0.2em]">Our Collection</span>
+                <h2 class="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-brand-navy mt-3 md:mt-4">The Luxury Fleet</h2>
+                <div class="w-12 md:w-16 h-1 bg-brand-maroon mx-auto mt-4 md:mt-6"></div>
+                <p class="mt-4 md:mt-6 text-sm md:text-base text-gray-600 max-w-2xl mx-auto">Immaculately maintained vehicles designed to provide absolute comfort across diverse Indian terrains.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+                
+                <!-- Premium Sedan (swift.webp) -->
+                <div class="group bg-brand-cream rounded-sm overflow-hidden shadow-lg border border-gray-100 hover:shadow-premium transition-all duration-300 reveal-up">
+                    <div class="relative h-48 md:h-56 overflow-hidden">
+                        <img src="./swift.webp" alt="Premium Sedan" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?q=80&w=1000&auto=format&fit=crop';">
+                        <div class="absolute top-4 right-4 bg-brand-navy text-brand-gold text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm">Executive</div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-brand-navy mb-2">Premium Sedan</h3>
+                        <p class="text-xs md:text-sm text-gray-600 mb-6">Swift Dzire, Etios or similar. Perfect for solo executives or couples seeking efficient city transfers.</p>
+                        
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4 text-[10px] md:text-xs font-semibold text-brand-navy">
+                            <span title="Passengers"><i class="fa-solid fa-user-group text-brand-gold mr-1.5"></i> 1-3 Guests</span>
+                            <span title="Luggage"><i class="fa-solid fa-suitcase text-brand-gold mr-1.5"></i> 2 Bags</span>
+                            <span title="Climate Control"><i class="fa-solid fa-snowflake text-brand-gold mr-1.5"></i> Dual AC</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Luxury SUV Innova (innova.jpg) -->
+                <div class="group bg-brand-cream rounded-sm overflow-hidden shadow-lg border border-brand-gold/30 relative hover:shadow-premium transition-all duration-300 reveal-up reveal-delay-1 lg:-translate-y-4">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold z-10"></div>
+                    <div class="relative h-52 md:h-60 overflow-hidden">
+                        <img src="./innova.jpg" alt="Luxury SUV Innova" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1563720223185-11003d516935?q=80&w=1000&auto=format&fit=crop';">
+                        <div class="absolute top-4 right-4 bg-brand-maroon text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm shadow-md">Most Popular</div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-brand-navy mb-2">Luxury SUV (Innova)</h3>
+                        <p class="text-xs md:text-sm text-gray-600 mb-6">Toyota Innova Crysta. The undisputed king of Indian highways. Spacious legroom for families and heritage tours.</p>
+                        
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4 text-[10px] md:text-xs font-semibold text-brand-navy">
+                            <span title="Passengers"><i class="fa-solid fa-user-group text-brand-gold mr-1.5"></i> 4-6 Guests</span>
+                            <span title="Luggage"><i class="fa-solid fa-suitcase text-brand-gold mr-1.5"></i> 4 Bags</span>
+                            <span title="Climate Control"><i class="fa-solid fa-snowflake text-brand-gold mr-1.5"></i> Rear AC Vents</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tempo Traveller / Urbania (urbania.jpg) -->
+                <div class="group bg-brand-cream rounded-sm overflow-hidden shadow-lg border border-gray-100 hover:shadow-premium transition-all duration-300 reveal-up reveal-delay-2 md:col-span-2 lg:col-span-1">
+                    <div class="relative h-48 md:h-56 overflow-hidden">
+                        <img src="./urbania.jpg" alt="Force Urbania / Tempo Traveller" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" onerror="this.src='https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1000&auto=format&fit=crop';">
+                        <div class="absolute top-4 right-4 bg-brand-navy text-brand-gold text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-sm">Group Travel</div>
+                    </div>
+                    <div class="p-6 md:p-8">
+                        <h3 class="font-serif text-xl md:text-2xl font-bold text-brand-navy mb-2">Premium Urbania</h3>
+                        <p class="text-xs md:text-sm text-gray-600 mb-6">Luxury pushback seating designed for extended spiritual yatras, university tours, and large family expeditions.</p>
+                        
+                        <div class="flex items-center justify-between border-t border-gray-200 pt-4 text-[10px] md:text-xs font-semibold text-brand-navy">
+                            <span title="Passengers"><i class="fa-solid fa-user-group text-brand-gold mr-1.5"></i> 9-17 Guests</span>
+                            <span title="Luggage"><i class="fa-solid fa-suitcase text-brand-gold mr-1.5"></i> Heavy Luggage</span>
+                            <span title="Climate Control"><i class="fa-solid fa-snowflake text-brand-gold mr-1.5"></i> Individual AC</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curated Heritage Trails -->
+    <section id="destinations" class="py-16 md:py-24 bg-brand-navy relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-12 reveal-up">
+                <div class="max-w-2xl">
+                    <span class="text-brand-gold font-semibold uppercase text-[10px] md:text-xs tracking-[0.2em]">Spiritual & Cultural Experiences</span>
+                    <h2 class="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-white mt-3 md:mt-4">Curated Heritage Trails</h2>
+                </div>
+                <div class="mt-4 md:mt-0">
+                    <a href="#booking" class="text-brand-gold font-medium uppercase tracking-wider text-xs md:text-sm hover:text-white transition-colors border-b border-brand-gold pb-1 flex items-center gap-2">
+                        Plan a Custom Route <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="group card-gradient relative h-[300px] md:h-[400px] rounded-sm overflow-hidden cursor-pointer reveal-up">
+                    <img src="https://images.unsplash.com/photo-1561649987-1e5b854a8e0f?q=80&w=800&auto=format&fit=crop" alt="Varanasi Spiritual Tour" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full p-5 md:p-6 z-20 transition-transform duration-300 md:group-hover:-translate-y-2">
+                        <span class="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1.5 md:mb-2 block">The Sacred Circuit</span>
+                        <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-2">Varanasi & Ayodhya</h3>
+                        <p class="text-brand-cream/80 text-xs md:text-sm font-light md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">Experience the profound spirituality of the ancient ghats.</p>
+                    </div>
+                </div>
+
+                <div class="group card-gradient relative h-[300px] md:h-[400px] rounded-sm overflow-hidden cursor-pointer reveal-up reveal-delay-1 lg:-translate-y-6">
+                    <img src="https://images.unsplash.com/photo-1564507592333-c60657eea523?q=80&w=800&auto=format&fit=crop" alt="Taj Mahal Tour" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full p-5 md:p-6 z-20 transition-transform duration-300 md:group-hover:-translate-y-2">
+                        <span class="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1.5 md:mb-2 block">The Golden Triangle</span>
+                        <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-2">Agra & Jaipur</h3>
+                        <p class="text-brand-cream/80 text-xs md:text-sm font-light md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">Witness the architectural marvels of the Mughal empires.</p>
+                    </div>
+                </div>
+
+                <div class="group card-gradient relative h-[300px] md:h-[400px] rounded-sm overflow-hidden cursor-pointer reveal-up reveal-delay-2">
+                    <img src="https://images.unsplash.com/photo-1629814484057-bbbc07a5127d?q=80&w=800&auto=format&fit=crop" alt="Mathura Vrindavan Tour" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full p-5 md:p-6 z-20 transition-transform duration-300 md:group-hover:-translate-y-2">
+                        <span class="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1.5 md:mb-2 block">The Divine Path</span>
+                        <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-2">Mathura & Vrindavan</h3>
+                        <p class="text-brand-cream/80 text-xs md:text-sm font-light md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">Immerse yourself in the tales of Lord Krishna's land.</p>
+                    </div>
+                </div>
+
+                <div class="group card-gradient relative h-[300px] md:h-[400px] rounded-sm overflow-hidden cursor-pointer reveal-up reveal-delay-3 lg:-translate-y-6">
+                    <img src="https://images.unsplash.com/photo-1599661046827-dacff0c0f09a?q=80&w=800&auto=format&fit=crop" alt="Rajasthan Heritage Tour" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110">
+                    <div class="absolute bottom-0 left-0 w-full p-5 md:p-6 z-20 transition-transform duration-300 md:group-hover:-translate-y-2">
+                        <span class="text-brand-gold text-[10px] md:text-xs font-bold uppercase tracking-wider mb-1.5 md:mb-2 block">The Royal Expedition</span>
+                        <h3 class="text-xl md:text-2xl font-serif font-bold text-white mb-2">Rajasthan Palaces</h3>
+                        <p class="text-brand-cream/80 text-xs md:text-sm font-light md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-500 delay-100">Traverse the majestic forts with our premium SUV fleet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges & Global Standards -->
+    <section class="py-12 md:py-16 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal-up">
+            <h3 class="text-xs md:text-sm font-bold text-gray-400 uppercase tracking-[0.2em] mb-6 md:mb-8">Recognized For Excellence</h3>
+            <div class="grid grid-cols-2 md:flex flex-wrap justify-center items-center gap-6 md:gap-16 opacity-60 md:grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-certificate text-2xl md:text-3xl text-brand-gold"></i><span class="font-bold text-sm md:text-lg font-serif">ISO Certified</span></div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-plane-arrival text-2xl md:text-3xl text-brand-navy"></i><span class="font-bold text-sm md:text-lg font-serif">Inbound Tours</span></div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-brands fa-tripadvisor text-3xl md:text-4xl text-green-600"></i><span class="font-bold text-sm md:text-lg font-serif">5-Star Rated</span></div>
+                <div class="flex items-center justify-center gap-2"><i class="fa-solid fa-lock text-2xl md:text-3xl text-brand-maroon"></i><span class="font-bold text-sm md:text-lg font-serif">Secure Booking</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-brand-navy pt-16 md:pt-20 pb-10 text-brand-cream relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-10 md:gap-8 mb-12 md:mb-16">
+                <div class="sm:col-span-2 lg:col-span-5 space-y-6">
+                    <div class="bg-brand-white/95 inline-block p-1.5 md:p-2 rounded-lg shadow-gold-glow">
+                        <img src="Raaspriya Travels_ Journeys With Devotion (1).png" alt="Raaspriya Travels Logo" class="h-16 md:h-20 w-auto">
+                    </div>
+                    <p class="text-brand-cream/70 font-light max-w-sm leading-relaxed text-xs md:text-sm">
+                        Establishing the gold standard in Indian travel. We bridge the gap between ancient heritage and modern luxury, ensuring every journey is undertaken with devotion and absolute trust.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-cream/10 flex items-center justify-center hover:bg-brand-gold transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-cream/10 flex items-center justify-center hover:bg-brand-gold transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-brand-cream/10 flex items-center justify-center hover:bg-brand-gold transition-colors"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-span-1 lg:col-span-3 space-y-4">
+                    <h4 class="font-serif text-base md:text-lg font-bold text-white mb-4 md:mb-6">Concierge Links</h4>
+                    <ul class="space-y-3 text-xs md:text-sm text-brand-cream/70 font-light">
+                        <li><a href="#booking" class="hover:text-brand-gold transition-colors">Book a Vehicle</a></li>
+                        <li><a href="#fleet" class="hover:text-brand-gold transition-colors">Explore the Fleet</a></li>
+                        <li><a href="#destinations" class="hover:text-gold transition-colors">Heritage Itineraries</a></li>
+                        <li><a href="#trust" class="hover:text-brand-gold transition-colors">Corporate Values</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-span-1 lg:col-span-4 space-y-4">
+                    <h4 class="font-serif text-base md:text-lg font-bold text-white mb-4 md:mb-6">Global Contact Center</h4>
+                    <ul class="space-y-4 text-xs md:text-sm text-brand-cream/70 font-light">
+                        <li class="flex items-start gap-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-brand-gold"></i>
+                            <span>Corporate Headquarters<br>Varanasi, Uttar Pradesh, India</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-phone text-brand-gold"></i>
+                            <a href="tel:+918005005453" class="hover:text-white transition-colors">+91 8005005453 (24/7)</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-brands fa-whatsapp text-brand-gold"></i>
+                            <a href="https://wa.me/918005005453" target="_blank" class="hover:text-white transition-colors">Chat securely on WhatsApp</a>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-envelope text-brand-gold"></i>
+                            <a href="mailto:concierge@raaspriyatravels.com" class="hover:text-white transition-colors">concierge@raaspriyatravels.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-brand-cream/10 pt-6 md:pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-[10px] md:text-xs text-brand-cream/50 font-light text-center">
+                <p>&copy; 2026 Raaspriya Travels. All Rights Reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-brand-gold transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-brand-gold transition-colors">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+
+            const menuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            const revealElements = document.querySelectorAll('.reveal-up');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                root: null,
+                threshold: 0.15,
+                rootMargin: "0px 0px -50px 0px"
+            });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+
+            const bookingForm = document.getElementById('premium-booking-form');
+            if (bookingForm) {
+                bookingForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    
+                    const pickup = document.getElementById('pickup').value.trim();
+                    const destination = document.getElementById('destination').value.trim();
+                    const date = document.getElementById('date').value.trim();
+                    const vehicle = document.getElementById('vehicle').value;
+                    
+                    const message = `*Raaspriya Travels - Premium Booking Request*\n\n`
+                                  + `Greetings, I would like to request a quotation for the following journey:\n\n`
+                                  + `📍 *Pick-up Location:* ${pickup}\n`
+                                  + `🚩 *Destination:* ${destination}\n`
+                                  + `📅 *Journey Date:* ${date}\n`
+                                  + `🚗 *Vehicle Class:* ${vehicle}\n\n`
+                                  + `Please advise on availability and fare parameters. Thank you.`;
+                                  
+                    const encodedMessage = encodeURIComponent(message);
+                    const whatsappNumber = "918005005453";
+                    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+                    
+                    window.open(whatsappUrl, '_blank');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
